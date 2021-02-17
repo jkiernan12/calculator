@@ -70,7 +70,9 @@ operatorListeners("divide");
 //listeners for operators
 
 document.getElementById("solve").addEventListener("click", function() {
-  if (numberTwo == "") {
+
+  if (currentOperator != "") {
+ if (numberTwo == "") {
   numberTwo = numberOne;
   numberOne = "";
   resultWindow.textContent = numberTwo;
@@ -82,10 +84,11 @@ document.getElementById("solve").addEventListener("click", function() {
   currentOperator = "";
   numberOne = "";
 }
+}
 }, false);
 document.getElementById("clear").addEventListener("click", function() {
 numberOne = "";
 numberTwo = "";
 currentOperator = "";
-resultWindow.textContent = "0";
+resultWindow.textContent = "";
 }, false);
